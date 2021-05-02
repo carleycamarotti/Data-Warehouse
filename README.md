@@ -1,1 +1,4 @@
-# Data-Warehouse
+Sparkify has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
+
+Firstly, the tables that will be used to create this pipeline are created in `sql_queries.py` along with insert functionality. A pipeline, built in `etl.py`, extracts their data from S3, stages them in Redshift and transforms data into a set of dimensional tables for their analytics team to continue finding insights in what songs their users are listening to. These dimensional tables include data about artists, songs, users, and dates with the songplay fact table connecting data in each table. This information will be easily and quickly used by their analytics team due to the sortkeys assigned on each table.
+
